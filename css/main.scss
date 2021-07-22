@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&display=swap');
+
+:root {
+    --font-colour: hsl(229, 23%, 23%);
+    --font-colour-light: hsl(0, 0%, 59%);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: hsl(185, 75%, 39%);
+    position: relative;
+    overflow: hidden;
+
+    font-family: 'Kumbh Sans', sans-serif;
+    color: var(--font-colour);
+    font-size: 18px;
+}
+
+.bg-top, .bg-bottom { position: absolute; z-index: 1; }
+
+.bg-top { right: 55%; bottom: 55%; }
+
+.bg-bottom { left: 55%; top: 55%; }
+
+.profile {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5em;
+    text-align: center;
+    z-index: 2;
+
+    .card {
+        width: 350px;
+        height: 370px;
+        background: url("../images/bg-pattern-card.svg") no-repeat white;
+        border-radius: 10px;
+        box-shadow: dimgray 0px 1px 1px 0px inset,
+                    darkcyan 0px 50px 100px -20px,
+                    darkslateblue 0px 30px 60px -30px;
+        
+        .individual-section {
+            font-weight: bold;
+            
+            span { color: var(--font-colour-light); font-weight: lighter;}
+            
+            > img {
+                border: 5px solid white;
+                border-radius: 50%;
+                margin-top: 25%;
+                margin-bottom: 2.5%;
+                max-width: 100%;
+            }
+        }
+
+        .social-section {
+            letter-spacing: 0.1em;
+            font-weight: bold;
+            
+            span { color: var(--font-colour-light); font-weight: lighter;}
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 66px;
+        }
+    } 
+}
+
+.profile hr { margin: 0; opacity: 0.4; }
+
+.attribution {
+    line-height: 1.6em;
+    font-size: 1em;
+    text-align: center;
+    color: var(--font-colour);
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
